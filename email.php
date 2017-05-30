@@ -25,12 +25,10 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $name = $_POST['name'];
 $email = $_POST['email'];
-$subject = $_POST['subject'];
-$website = $_POST['website'];
 $message = $_POST['message'];
 
-$mail->Subject = $subject . "-" . $email;
-$mail->Body    = "In regards to " . $website . ", " . $name . " said: " . $message;
+$mail->Subject = $email;
+$mail->Body    = $name . " wants to get in contact, they said: " . $message;
 //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {

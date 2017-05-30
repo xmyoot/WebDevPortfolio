@@ -351,8 +351,9 @@
                               <i class="icon-globe"></i>
                             </div>
                             <div class="sny-icon-content">
-                              <h4>My Address</h4>
-                              <p>Some Apartment 405 in a jungle nearby a restaurant</p>
+                              <h4>Got a Project Idea?</h4>
+                              <p>Let's discuss your requirements. By filling up this form, I will be able to strategize a solution to meet your project goals.</p>
+							  <button class="project">Get Started!</button>
                             </div>
                          </div>
                        </div>
@@ -362,8 +363,8 @@
                               <i class="icon-phone"></i>
                             </div>
                             <div class="sny-icon-content">
-                              <h4>Mobile Number</h4>
-                              <p>999-9999-999<br/>999-1112-999</p>
+                              <h4>Or just quick question?</h4>
+                              <p>If you're not completely ready to get started on your project, feel free to send me a question in the comment box. I'd be glad to answer any inquires about my services or design process. If you want an even faster response please call me at the number below. <br/> <b>CALL ME @ ( 951 ) 870-5570</b></p>
                             </div>
                          </div>
                        </div>
@@ -373,8 +374,20 @@
                               <i class="icon-user"></i>
                             </div>
                             <div class="sny-icon-content">
-                              <h4>About Me</h4>
-                              <p>I love to work, so don't be shy, i am just an email away.</p>
+                              <h4>Leave a Comment</h4>
+                              <form id="ajax-contact" role="form" method="POST" action="email.php">
+                                <div class="form-group">
+                                  <input id="name" name="name" type="text" class="form-control" id="user_name" placeholder="Name*" required>
+                                </div>
+                                <div class="form-group">
+                                  <input id="email" name="email" type="email" class="form-control" id="your_email" placeholder="Email*" required>
+                                </div>
+                                <div class="form-group">
+                                  <textarea id="message" name="message" id="user_message" class="form-control" placeholder="Comment*" rows="5" required></textarea>
+                                </div>
+                                <button type="submit"  class="btn btn-outline-primary commentBtn">Submit!</button>
+                                <div id="form-messages" class="alert" style="margin-top: 15px;"></div>
+                              </form>
                             </div>
                          </div>
                        </div>
