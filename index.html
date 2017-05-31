@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
   <script src="js/vendor/jquery.hashchange.min.js"></script>
   <script src="js/vendor/jquery.easytabs.min.js"></script>
@@ -340,19 +340,34 @@
               <!-- Contact Tab Data -->
                 <div id="contact">
                     <section class="clearfix">
-                       <div class="g1">
+                       <div class="g1 projectIdea">
                          <div class="sny-icon-box">
                            <div class="sny-icon">
                               <i class="icon-globe"></i>
                             </div>
                             <div class="sny-icon-content">
-                              <h4>Got a Project Idea?</h4>
-                              <p>Let's discuss your requirements. By filling up this form, I will be able to strategize a solution to meet your project goals.</p>
+                              <h4 class="projectIdeaHeading">Got a Project Idea?</h4>
+                              <p style="margin-bottom: 10px;" class="letsDiscuss">Let's discuss your requirements. By filling up this form, I will be able to strategize a solution to meet your project goals.</p>
 							  <button class="project">Get Started!</button>
+                                <div class="projectForm" style="display: none; width:100%; height: auto; border: 3px solid #e74c3c">
+                                    <form style="display:none;" id="ajax-project" role="form" method="POST" action="email.php">
+                                        <div class="form-group">
+                                        <input id="name" name="name" type="text" class="form-control1" id="user_name" placeholder="Name*" required style="margin-top: 6px;">
+                                        </div>
+                                        <div class="form-group">
+                                        <input id="email" name="email" type="email" class="form-control1" id="your_email" placeholder="Email*" required>
+                                        </div>
+                                        <div class="form-group">
+                                        <textarea id="message" name="message" id="user_message" class="form-control1" placeholder="Comment*" rows="5" required></textarea>
+                                        </div>
+                                        <button type="submit"  class="btn btn-outline-primary commentBtn">Submit!</button>
+                                        <div id="form-messages" class="alert" style="margin-top: 15px;"></div>
+                                    </form>
+                                </div>
                             </div>
                          </div>
                        </div>
-                       <div class="g1">
+                       <div class="g1 phoneMe">
                          <div class="sny-icon-box">
                            <div class="sny-icon">
                               <i class="icon-phone"></i>
@@ -363,7 +378,7 @@
                             </div>
                          </div>
                        </div>
-                       <div class="g1">
+                       <div class="g1 leaveComment">
                          <div class="sny-icon-box">
                            <div class="sny-icon">
                               <i class="icon-user"></i>
@@ -401,7 +416,29 @@
         </footer>
     </div><!-- #main -->
 </div><!-- #main-container -->
-
+<script>
+    $(document).ready(function(){
+        $(".project").click(function(){
+            $(".phoneMe").hide(1500);
+            $(".leaveComment").hide(1500);
+            $(".letsDiscuss").text("Please answer the following questions so I can determine the right solution for you.");
+            $(".projectIdeaHeading").text("Let's Go!");
+            $(".projectIdea").animate({
+                width: "70%",
+                marginRight: "15%",
+                marginLeft: "15%"
+            });
+            $(".project").fadeOut(1500);
+            $(".projectForm").show(500);
+            $("#ajax-project").show(1000);
+            $(".form-control1").animate({
+                width: "70%",
+                marginRight: "15%",
+                marginLeft: "15%"
+            });
+        });
+    });
+</script>
 
 
 </body>
