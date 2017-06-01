@@ -23,6 +23,17 @@
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
       <![endif]-->
+      <style>
+          .form-group {
+            width: 75%;
+            margin-left: 10%;
+            margin-right: 15%;
+            margin-bottom: 2.5%;
+          }
+          label {
+              font-weight:bold;
+          }
+      </style>
 </head>
   <body class="bg-fixed bg-1">
 <!--[if lt IE 7]>
@@ -351,407 +362,389 @@
 							  <button class="project">Get Started!</button>
                                 <div class="projectForm" style="display: none; width:100%; height: auto; border: 3px solid #e74c3c">
                                 
-                                        <form style="display:none;" id="ajax-project" role="form" method="post" action="email.php">
-                                    <fieldset>
+                                    <form style="display:none;" id="ajax-project" role="form" method="post" action="email.php">
+                                            <fieldset>
 
-                                    <!-- Form Name -->
-                                    <legend>Form Name</legend>
+                                            <!-- Form Name -->
+                                            <h4>Project Form</h4>
 
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="companyName">Company Name</label>  
-                                    <div class="col-md-4">
-                                    <input id="companyName" name="companyName" type="text" placeholder="" class="form-control input-md">
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                                <label class="col-sm-6 control-label" for="companyName">Company Name</label>  
+                                                <input id="companyName" name="companyName" type="text" placeholder="" class="form-control input-md col-sm-6">
+                                            </div>
+
+                                            <!-- Textarea -->
+                                            <div class="form-group">
+                                                <label class="col-sm-6 control-label" for="occupation">Tell me what this company does.</label>           
+                                                <input id="occupation" name="occupation" type="text" placeholder="" class="form-control input-md col-sm-6">
+                                            </div>
+
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                                <label class="col-sm-6 control-label" for="email">Email</label>  
+                                                <input id="email" name="email" type="text" placeholder="" class="form-control input-md col-sm-6">
+                                            </div>
+
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                                <label class="col-sm-6 control-label" for="domain">Domain</label>  
+                                                <input id="domain" name="domain" type="text" placeholder="If none, leave blank" class="form-control input-md col-sm-6">
+                                            </div>
+
+                                            <!-- Multiple Checkboxes -->
+                                            <div class="form-group">
+                                            <label class="col-sm-6 control-label" for="purpose">Purpose of Site</label>
+                                            <div class="col-sm-6">
+                                            <div class="checkbox">
+                                                <label for="purpose-0">
+                                                <input type="checkbox"  name="purpose" id="purpose-0" value="1">
+                                                I need to build awareness for my brand
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="purpose-1">
+                                                <input type="checkbox" name="purpose" id="purpose-1" value="2">
+                                                I need to offer a contact point for my clients
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="purpose-2">
+                                                <input type="checkbox" name="purpose" id="purpose-2" value="3">
+                                                I need my company to have a better image online
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="purpose-3">
+                                                <input type="checkbox" name="purpose" id="purpose-3" value="4">
+                                                I need to sell my product or service through my site
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="purpose-4">
+                                                <input type="checkbox" name="purpose" id="purpose-4" value="5">
+                                                I need it to build customer loyalty
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="purpose-5">
+                                                <input type="checkbox" name="purpose" id="purpose-5" value="6">
+                                                I need to reach people in many languages
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="purpose-6">
+                                                <input type="checkbox" name="purpose" id="purpose-6" value="7">
+                                                I need somewhere to promote my latest product / service
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="purpose-7">
+                                                <input type="checkbox" name="purpose" id="purpose-7" value="8">
+                                                I have my own reasons
+                                                </label>
+                                                </div>
+                                            </div>
+                                            </div>
+
+                                            <!-- Textarea -->
+                                            <div class="form-group">
+                                            <label class="col-sm-6 control-label" for="demo">My site is for:</label>
+                                                <div class="col-sm-6">         
+                                                <textarea class="col-sm-6 form-control" id="demo" name="demo">Age:   Gender:   Income:   Education:   Geography:   Occupation:   </textarea>
+                                                </div>
+                                            </div>
+
+                                            <!-- Select Basic -->
+                                            <div class="form-group">
+                                            <label class="col-sm-6control-label" for="potential">Why do clients come to your site?</label>
+                                            <div class="col-sm-6">
+                                                <select id="potential" name="potential" class="form-control">
+                                                <option value="1">I offer excellent service</option>
+                                                <option value="2">I have the best products on the market</option>
+                                                <option value="3">I have the best prices on the market</option>
+                                                <option value="4">Other</option>
+                                                </select>
+                                            </div>
+                                            </div>
+
+                                            <!-- Multiple Checkboxes -->
+                                            <div class="form-group">
+                                            <label class="col-md-4 control-label" for="requirements">Must Include: </label>
+                                            <div class="col-md-4">
+                                            <div class="checkbox">
+                                                <label for="requirements-0">
+                                                <input type="checkbox" name="requirements" id="requirements-0" value="1">
+                                                A basic HTML site
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-1">
+                                                <input type="checkbox" name="requirements" id="requirements-1" value="2">
+                                                An HTML5/CSS3 website
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-2">
+                                                <input type="checkbox" name="requirements" id="requirements-2" value="3">
+                                                Responsive design for use of desktops, tablets and mobile
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-3">
+                                                <input type="checkbox" name="requirements" id="requirements-3" value="4">
+                                                A WordPress based CMS
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-4">
+                                                <input type="checkbox" name="requirements" id="requirements-4" value="5">
+                                                An Online Magazine
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-5">
+                                                <input type="checkbox" name="requirements" id="requirements-5" value="6">
+                                                An Online forum
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-6">
+                                                <input type="checkbox" name="requirements" id="requirements-6" value="7">
+                                                A blog
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-7">
+                                                <input type="checkbox" name="requirements" id="requirements-7" value="8">
+                                                A newsletter or email list system
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-8">
+                                                <input type="checkbox" name="requirements" id="requirements-8" value="9">
+                                                Social network integration
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-9">
+                                                <input type="checkbox" name="requirements" id="requirements-9" value="10">
+                                                Separate, dedicated landing / sales pages
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-10">
+                                                <input type="checkbox" name="requirements" id="requirements-10" value="11">
+                                                A redesign of the current website
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="requirements-11">
+                                                <input type="checkbox" name="requirements" id="requirements-11" value="12">
+                                                Additional requirements
+                                                </label>
+                                                </div>
+                                            </div>
+                                            </div>
+
+                                            <!-- Multiple Checkboxes -->
+                                            <div class="form-group">
+                                            <label class="col-md-4 control-label" for="features">Needed Features:</label>
+                                            <div class="col-md-4">
+                                            <div class="checkbox">
+                                                <label for="features-0">
+                                                <input type="checkbox" name="features" id="features-0" value="1">
+                                                Registration form
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-1">
+                                                <input type="checkbox" name="features" id="features-1" value="2">
+                                                Video streaming
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-2">
+                                                <input type="checkbox" name="features" id="features-2" value="3">
+                                                MySQL database
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-3">
+                                                <input type="checkbox" name="features" id="features-3" value="4">
+                                                Search functionality
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-4">
+                                                <input type="checkbox" name="features" id="features-4" value="5">
+                                                Multi-column layout
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-5">
+                                                <input type="checkbox" name="features" id="features-5" value="6">
+                                                Newsletter / email sign up forms with appropriate calls to action
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-6">
+                                                <input type="checkbox" name="features" id="features-6" value="7">
+                                                Information / request forms
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-7">
+                                                <input type="checkbox" name="features" id="features-7" value="8">
+                                                Uploads / downloads
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-8">
+                                                <input type="checkbox" name="features" id="features-8" value="9">
+                                                Customer login
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-9">
+                                                <input type="checkbox" name="features" id="features-9" value="10">
+                                                An online store / shopping cart
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-10">
+                                                <input type="checkbox" name="features" id="features-10" value="11">
+                                                Online payment gateway
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-11">
+                                                <input type="checkbox" name="features" id="features-11" value="12">
+                                                Blog module
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-12">
+                                                <input type="checkbox" name="features" id="features-12" value="13">
+                                                Image gallery
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-13">
+                                                <input type="checkbox" name="features" id="features-13" value="14">
+                                                Image slider
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="features-14">
+                                                <input type="checkbox" name="features" id="features-14" value="15">
+                                                Other features
+                                                </label>
+                                                </div>
+                                            </div>
+                                            </div>
+
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                            <label class="col-sm-6 control-label" for="unique">What makes your services unique?</label>  
                                         
-                                    </div>
-                                    </div>
+                                            <input id="unique" name="unique" type="text" placeholder="" class="col-sm-6 form-control input-md">
+                                                
+                                            
+                                            </div>
 
-                                    <!-- Textarea -->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="occupation">Tell me what this company does.</label>
-                                    <div class="col-md-4">                     
-                                        <textarea class="form-control" id="occupation" name="occupation"></textarea>
-                                    </div>
-                                    </div>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                            <label class="col-sm-6 control-label" for="keywords">Enter Keywords</label>  
+                                            
+                                            <input id="keywords" name="keywords" type="text" placeholder="At least 3" class="col-sm-6 form-control input-md">
+                                                
+                                         
+                                            </div>
 
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="email">Email</label>  
-                                    <div class="col-md-4">
-                                    <input id="email" name="email" type="text" placeholder="" class="form-control input-md">
+                                            <!-- Textarea -->
+                                            <div class="form-group">
+                                            <label class="col-md-4 control-label" for="assets">Who will provide the resources?</label>
+                                            <div class="col-md-4">                     
+                                                <textarea class="form-control" id="assets" name="assets">Images:   Illustrations:   Copy:   </textarea>
+                                            </div>
+                                            </div>
+
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                            <label class="col-sm-6 control-label" for="update">Who will update the site?</label>  
+                                      
+                                            <input id="update" name="update" type="text" placeholder="And how often? Daily? Monthly?" class="col-sm-6 form-control input-md">
+                                                
                                         
-                                    </div>
-                                    </div>
+                                            </div>
 
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="domain">Domain</label>  
-                                    <div class="col-md-4">
-                                    <input id="domain" name="domain" type="text" placeholder="If none, leave blank" class="form-control input-md">
-                                        
-                                    </div>
-                                    </div>
+                                            <!-- Multiple Checkboxes -->
+                                            <div class="form-group">
+                                            <label class="col-md-4 control-label" for="additional">Do you need additional marketing services?</label>
+                                            <div class="col-md-4">
+                                            <div class="checkbox">
+                                                <label for="additional-0">
+                                                <input type="checkbox" name="additional" id="additional-0" value="1">
+                                                Social Network Mangement
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="additional-1">
+                                                <input type="checkbox" name="additional" id="additional-1" value="2">
+                                                Search engine optimization and link building
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="additional-2">
+                                                <input type="checkbox" name="additional" id="additional-2" value="3">
+                                                Content marketing
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="additional-3">
+                                                <input type="checkbox" name="additional" id="additional-3" value="4">
+                                                Email list management
+                                                </label>
+                                                </div>
+                                            <div class="checkbox">
+                                                <label for="additional-4">
+                                                <input type="checkbox" name="additional" id="additional-4" value="5">
+                                                Other…
+                                                </label>
+                                                </div>
+                                            </div>
+                                            </div>
 
-                                    <!-- Multiple Checkboxes -->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="purpose">Purpose of Site</label>
-                                    <div class="col-md-4">
-                                    <div class="checkbox">
-                                        <label for="purpose-0">
-                                        <input type="checkbox" name="purpose" id="purpose-0" value="1">
-                                        I need to build awareness for my brand
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="purpose-1">
-                                        <input type="checkbox" name="purpose" id="purpose-1" value="2">
-                                        I need to offer a contact point for my clients
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="purpose-2">
-                                        <input type="checkbox" name="purpose" id="purpose-2" value="3">
-                                        I need my company to have a better image online
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="purpose-3">
-                                        <input type="checkbox" name="purpose" id="purpose-3" value="4">
-                                        I need to sell my product or service through my site
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="purpose-4">
-                                        <input type="checkbox" name="purpose" id="purpose-4" value="5">
-                                        I need it to build customer loyalty
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="purpose-5">
-                                        <input type="checkbox" name="purpose" id="purpose-5" value="6">
-                                        I need to reach people in many languages
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="purpose-6">
-                                        <input type="checkbox" name="purpose" id="purpose-6" value="7">
-                                        I need somewhere to promote my latest product / service
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="purpose-7">
-                                        <input type="checkbox" name="purpose" id="purpose-7" value="8">
-                                        I have my own reasons
-                                        </label>
-                                        </div>
-                                    </div>
-                                    </div>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                            <label class="col-sm-6 control-label" for="training">Would you like training sessions for employees learning to update the site?</label>  
+                                            
+                                            <input id="training" name="training" type="text" placeholder="" class="col-sm-6 form-control input-md">
+                                                
+                                       
+                                            </div>
 
-                                    <!-- Textarea -->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="demo">My site is for:</label>
-                                    <div class="col-md-4">                     
-                                        <textarea class="form-control" id="demo" name="demo">Age:
-                                    Gender:
-                                    Income:
-                                    Education:
-                                    Geography:
-                                    Occupation:</textarea>
-                                    </div>
-                                    </div>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                            <label class="col-sm-6 control-label" for="budget">Project Budget</label>  
+                                          
+                                            <input id="budget" name="budget" type="text" placeholder="" class="col-sm-6 form-control input-md">
+                                                
+                                      
+                                            </div>
 
-                                    <!-- Select Basic -->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="potential">Why do clients come to your site?</label>
-                                    <div class="col-md-4">
-                                        <select id="potential" name="potential" class="form-control">
-                                        <option value="1">I offer excellent service</option>
-                                        <option value="2">I have the best products on the market</option>
-                                        <option value="3">I have the best prices on the market</option>
-                                        <option value="4">Other</option>
-                                        </select>
-                                    </div>
-                                    </div>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                            <label class="col-sm-6 control-label" for="deadline">Deadline</label>  
+                                           
+                                            <input id="deadline" name="deadline" type="text" placeholder="Enter a date" class="col-sm-6 form-control input-md">
+                                                
+                                            </div>
+                                            <button type="submit"  class="btn btn-outline-primary commentBtn">Submit!</button>
+                                            <div id="form-messages" class="alert" style="margin-top: 15px;"></div>
 
-                                    <!-- Multiple Checkboxes -->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="requirements">Must Include: </label>
-                                    <div class="col-md-4">
-                                    <div class="checkbox">
-                                        <label for="requirements-0">
-                                        <input type="checkbox" name="requirements" id="requirements-0" value="1">
-                                        A basic HTML site
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-1">
-                                        <input type="checkbox" name="requirements" id="requirements-1" value="2">
-                                        An HTML5/CSS3 website
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-2">
-                                        <input type="checkbox" name="requirements" id="requirements-2" value="3">
-                                        Responsive design for use of desktops, tablets and mobile
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-3">
-                                        <input type="checkbox" name="requirements" id="requirements-3" value="4">
-                                        A WordPress based CMS
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-4">
-                                        <input type="checkbox" name="requirements" id="requirements-4" value="5">
-                                        An Online Magazine
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-5">
-                                        <input type="checkbox" name="requirements" id="requirements-5" value="6">
-                                        An Online forum
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-6">
-                                        <input type="checkbox" name="requirements" id="requirements-6" value="7">
-                                        A blog
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-7">
-                                        <input type="checkbox" name="requirements" id="requirements-7" value="8">
-                                        A newsletter or email list system
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-8">
-                                        <input type="checkbox" name="requirements" id="requirements-8" value="9">
-                                        Social network integration
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-9">
-                                        <input type="checkbox" name="requirements" id="requirements-9" value="10">
-                                        Separate, dedicated landing / sales pages
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-10">
-                                        <input type="checkbox" name="requirements" id="requirements-10" value="11">
-                                        A redesign of the current website
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="requirements-11">
-                                        <input type="checkbox" name="requirements" id="requirements-11" value="12">
-                                        Additional requirements
-                                        </label>
-                                        </div>
-                                    </div>
-                                    </div>
-
-                                    <!-- Multiple Checkboxes -->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="features">Needed Features:</label>
-                                    <div class="col-md-4">
-                                    <div class="checkbox">
-                                        <label for="features-0">
-                                        <input type="checkbox" name="features" id="features-0" value="1">
-                                        Registration form
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-1">
-                                        <input type="checkbox" name="features" id="features-1" value="2">
-                                        Video streaming
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-2">
-                                        <input type="checkbox" name="features" id="features-2" value="3">
-                                        MySQL database
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-3">
-                                        <input type="checkbox" name="features" id="features-3" value="4">
-                                        Search functionality
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-4">
-                                        <input type="checkbox" name="features" id="features-4" value="5">
-                                        Multi-column layout
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-5">
-                                        <input type="checkbox" name="features" id="features-5" value="6">
-                                        Newsletter / email sign up forms with appropriate calls to action
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-6">
-                                        <input type="checkbox" name="features" id="features-6" value="7">
-                                        Information / request forms
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-7">
-                                        <input type="checkbox" name="features" id="features-7" value="8">
-                                        Uploads / downloads
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-8">
-                                        <input type="checkbox" name="features" id="features-8" value="9">
-                                        Customer login
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-9">
-                                        <input type="checkbox" name="features" id="features-9" value="10">
-                                        An online store / shopping cart
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-10">
-                                        <input type="checkbox" name="features" id="features-10" value="11">
-                                        Online payment gateway
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-11">
-                                        <input type="checkbox" name="features" id="features-11" value="12">
-                                        Blog module
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-12">
-                                        <input type="checkbox" name="features" id="features-12" value="13">
-                                        Image gallery
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-13">
-                                        <input type="checkbox" name="features" id="features-13" value="14">
-                                        Image slider
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="features-14">
-                                        <input type="checkbox" name="features" id="features-14" value="15">
-                                        Other features
-                                        </label>
-                                        </div>
-                                    </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="unique">What makes your services unique?</label>  
-                                    <div class="col-md-4">
-                                    <input id="unique" name="unique" type="text" placeholder="" class="form-control input-md">
-                                        
-                                    </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="keywords">Enter Keywords</label>  
-                                    <div class="col-md-4">
-                                    <input id="keywords" name="keywords" type="text" placeholder="At least 3" class="form-control input-md">
-                                        
-                                    </div>
-                                    </div>
-
-                                    <!-- Textarea -->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="assets">Who will provide the resources?</label>
-                                    <div class="col-md-4">                     
-                                        <textarea class="form-control" id="assets" name="assets">Images:
-                                    Illustrations:
-                                    Copywrite:
-                                    Font licenses:</textarea>
-                                    </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="update">Who will update the site?</label>  
-                                    <div class="col-md-4">
-                                    <input id="update" name="update" type="text" placeholder="And how often? Daily? Monthly?" class="form-control input-md">
-                                        
-                                    </div>
-                                    </div>
-
-                                    <!-- Multiple Checkboxes -->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="additional">Do you need additional marketing services?</label>
-                                    <div class="col-md-4">
-                                    <div class="checkbox">
-                                        <label for="additional-0">
-                                        <input type="checkbox" name="additional" id="additional-0" value="1">
-                                        Social Network Mangement
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="additional-1">
-                                        <input type="checkbox" name="additional" id="additional-1" value="2">
-                                        Search engine optimization and link building
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="additional-2">
-                                        <input type="checkbox" name="additional" id="additional-2" value="3">
-                                        Content marketing
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="additional-3">
-                                        <input type="checkbox" name="additional" id="additional-3" value="4">
-                                        Email list management
-                                        </label>
-                                        </div>
-                                    <div class="checkbox">
-                                        <label for="additional-4">
-                                        <input type="checkbox" name="additional" id="additional-4" value="5">
-                                        Other…
-                                        </label>
-                                        </div>
-                                    </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="training">Would you like training sessions for employees learning to update the site?</label>  
-                                    <div class="col-md-4">
-                                    <input id="training" name="training" type="text" placeholder="" class="form-control input-md">
-                                        
-                                    </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="budget">Project Budget</label>  
-                                    <div class="col-md-4">
-                                    <input id="budget" name="budget" type="text" placeholder="" class="form-control input-md">
-                                        
-                                    </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                    <label class="col-md-4 control-label" for="deadline">Deadline</label>  
-                                    <div class="col-md-4">
-                                    <input id="deadline" name="deadline" type="text" placeholder="Enter a date" class="form-control input-md">
-                                        
-                                    </div>
-                                    </div>
-
-                                    </fieldset>
+                                            </fieldset>
                                     </form>
 
                                 </div>
@@ -830,7 +823,7 @@
         });
     });
 </script>
-<script type="text/javascript" src="js/ajaxForm.js"></script>
+<script type="text/javascript" src="ajaxForm.js"></script>
 
 
 </body>
