@@ -51,6 +51,7 @@ $(function() {
 //*************************
 //AJAX PROJECT FORM
 //************************* 
+/*
 $(function() {
   // Get the form.
   var form = $('#ajax-project');
@@ -97,3 +98,4 @@ $(function() {
     });
   });
 });
+*/
