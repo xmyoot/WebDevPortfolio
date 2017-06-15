@@ -51,10 +51,9 @@ $(function() {
 //*************************
 //AJAX PROJECT FORM
 //************************* 
-/*
 $(function() {
   // Get the form.
-  var form = $('#ajax-project');
+  var form = $('#ajax-contact');
 
   // Get the messages div.
   var formMessages = $('#form-messages');
@@ -80,10 +79,6 @@ $(function() {
         // Set the message text.
         $(formMessages).text(response);
 
-        // Clear the form.
-        $('#name').val('');
-        $('#email').val('');
-        $('#message').val('');
     }).fail(function(data) {
         // Make sure that the formMessages div has the 'error' class.
         $(formMessages).removeClass('alert-success');
@@ -98,4 +93,3 @@ $(function() {
     });
   });
 });
-*/
