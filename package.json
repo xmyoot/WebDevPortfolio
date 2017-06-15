@@ -1,0 +1,22 @@
+{
+  "name": "hectorjimenez",
+  "version": "1.0.0",
+  "description": "web development portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmyoot/WebDevPortfolio.git"
+  },
+  "author": "hector jimenez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xmyoot/WebDevPortfolio/issues"
+  },
+  "homepage": "https://github.com/xmyoot/WebDevPortfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
