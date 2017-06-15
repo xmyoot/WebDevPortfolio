@@ -53,7 +53,7 @@ $(function() {
 //************************* 
 $(function() {
   // Get the form.
-  var form = $('#ajax-contact');
+  var form = $('#ajax-project');
 
   // Get the messages div.
   var formMessages = $('#form-messages');
